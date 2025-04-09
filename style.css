@@ -1,0 +1,185 @@
+:root {
+    --primary: #6A0DAD;
+    --primary-light: #9D4EDD;
+    --bg: #ffffff;
+    --text: #333;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  /* Title Bar */
+  .title-bar {
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    color: white;
+    padding: 30px 50px;
+    margin-bottom: 50px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+
+  .navbar-container {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Make sure it's visible */
+    z-index: 1000;
+    padding: 10px 0; /* Optional */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional */
+    border-radius: 30px;
+  }
+
+  /* Navigation */
+  .nav-buttons {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10 px;
+  }
+  
+  .nav {
+    padding: 15px 35px;
+    border: 2px solid var(--primary);
+    border-radius: 30px;
+    background-color: white;
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .nav:hover,
+  .nav.active {
+    background-color: var(--primary);
+    color: white;
+  }
+  
+  /* Main Content */
+  .center-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+  }
+  
+  .image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .image-container img {
+    width: 80%;                 /* Scales image to 80% of container width */
+    max-width: 600px;           /* Prevents it from getting too large on big screens */
+    height: auto;               /* Keeps the aspect ratio */
+    display: block;
+    margin: 0 auto;             /* Horizontally centers it */
+    border-radius: 10px;
+    border: 2px solid var(--primary-light);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .play-btn {
+    margin-top: 20px;
+    padding: 20px 60px;
+    background-color: white;
+    color: var(--primary);
+    font-size: 22px;
+    border: 2px solid var(--primary);
+    border-radius: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .play-btn:hover {
+    background-color: var(--primary-light);
+    /* transform: translate(-50%, -50%) scale(1.05); */
+  }
+  
+  /* Choice Buttons */
+  .choice-buttons {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 10px;
+  }
+  
+  .choice-buttons button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .choice-buttons button:hover {
+    background-color: var(--primary-light);
+  }
+  /* Purple theme colors */
+:root {
+  --primary: #5a189a;
+  --primary-light: #9d4edd;
+}
+
+/* Section styling */
+.section-box {
+  background-color: white;
+  border: 2px solid var(--primary);
+  border-radius: 10px;
+  padding: 40px;
+  color: var(--primary);
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary);
+}
+
+.section-text {
+  font-size: 1.1rem;
+  text-align: justify;
+  color: var(--primary);
+}
+
+.border-purple {
+  border: 2px solid var(--primary) !important;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+a{color: Black;}
