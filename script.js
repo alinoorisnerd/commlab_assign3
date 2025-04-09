@@ -1,3 +1,4 @@
+//array containing images that we use
 const images = [
     "", // Initial placeholder
     "assets/wakingup.webp",
@@ -11,7 +12,7 @@ const images = [
     "assets/fail (1).jpg"
 
   ];
-  
+  //array with all audios
   const audios = [
     "", // no audio for initial state
     "assets/audios/wakeu.mp3",
@@ -25,21 +26,22 @@ const images = [
     "assets/audios/Fail.mp3",
 
   ];
-  
+  //counter
   let currentIndex = 1;
+  //statemachine
   let finish = false ;
   
   const playBtn = document.getElementById("play-btn");
   const image = document.getElementById("main-image");
   const audio = document.getElementById("audio");
   const choiceButtons = document.getElementById("choice-buttons");
-  
+  //custom function -> initiates the logic of the program/ storyline
   function startSequence() {
     playBtn.style.display = "none";
     audio.style.display = "block";
     loadAndPlay(currentIndex);
   }
-  
+  // renders the appropriate sound and relevant image
   function loadAndPlay(index) {
     image.src = images[index];
     audio.src = audios[index];
@@ -71,6 +73,7 @@ const images = [
   
   // Handle user choice
   function loadAlternate(choiceIndex) {
+    // exception to prevent repetition of the same scene.
     if (choiceIndex  == 7) {
       currentIndex ++ ;
     }

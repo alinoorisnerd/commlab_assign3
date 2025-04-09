@@ -4,6 +4,8 @@
     --bg: #ffffff;
     --text: #333;
   }
+
+  /* remove all pre-conditioned styling */
   
   * {
     box-sizing: border-box;
@@ -12,6 +14,8 @@
     font-family: 'Segoe UI', sans-serif;
   }
   
+  /* body selector targetted */
+
   body {
     background-color: var(--bg);
     color: var(--text);
@@ -34,7 +38,7 @@
     font-weight: bold;
   }
   
-
+/* to wrap navbar inside and make it sticky positioned */
   .navbar-container {
     position: sticky;
     top: 0;
@@ -57,7 +61,7 @@
     padding-right: 10px;
     padding-bottom: 10 px;
   }
-  
+  /* inidiviual links for the nav */
   .nav {
     padding: 15px 35px;
     border: 2px solid var(--primary);
@@ -69,14 +73,14 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+  /* color change upon hovering over the buttons -> parent-child tag selection used */
   .nav:hover,
   .nav.active {
     background-color: var(--primary);
     color: white;
   }
   
-  /* Main Content */
+  /* Main Content - image and the video */
   .center-content {
     display: flex;
     flex-direction: column;
@@ -89,18 +93,18 @@
     position: relative;
     display: inline-block;
   }
-  
+  /* main image centered  */
   .image-container img {
-    width: 80%;                 /* Scales image to 80% of container width */
-    max-width: 600px;           /* Prevents it from getting too large on big screens */
-    height: auto;               /* Keeps the aspect ratio */
+    width: 80%;                 
+    max-width: 600px;          
+    height: auto;               
     display: block;
-    margin: 0 auto;             /* Horizontally centers it */
+    margin: 0 auto;             
     border-radius: 10px;
     border: 2px solid var(--primary-light);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
-  
+  /* the play button that initiates the start sequence */
   .play-btn {
     margin-top: 20px;
     padding: 20px 60px;
@@ -113,7 +117,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
-  
+  /* color changing the 'play' button */
   .play-btn:hover {
     background-color: var(--primary-light);
     /* transform: translate(-50%, -50%) scale(1.05); */
@@ -161,7 +165,8 @@
 }
 
 .section-title {
-  font-size: 2rem;
+  font-size: 2rem; 
+  /* i used rem - root sizing as px got confusing for me */
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
@@ -175,11 +180,16 @@
 }
 
 .border-purple {
-  border: 2px solid var(--primary) !important;
+  border: 2px solid var(--primary) !important; 
+  /* to prevent css specificity rules from over-ruling the theme 
+  the colors weren't working before. maybe was an issue of conflict with bootstrap
+  framework used. resolved with this command.
+   */
 }
 
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
-a{color: Black;}
+a{color: Black;} 
+/* to avoid non-preferred blue hint of anchor tags in nav buttons */

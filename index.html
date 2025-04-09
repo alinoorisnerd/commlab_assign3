@@ -1,17 +1,22 @@
+<!-- boilerplate code -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- title -->
   <title>Sound Project</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="title-bar">
+    <!-- topic name -->
     <h1>Echoes of a Day</h1>
   </div>
+  <!-- this allows for 'sticky' option -->
 <div class="navbar-container">
+  <!-- navbar containing the buttons -->
   <nav class="nav-buttons">
     <button class="nav"> <a href="#home"> Home </a> </button>
     <button class="nav"><a href="#about"> About </a> </button>
@@ -19,16 +24,20 @@
     <button class="nav"><a href="#team">Team</a> </button>
   </nav>
 </div>
+<!-- home section -->
 <section id="home">
   <main>
     <div class="center-content">
       <div class="image-container">
+        <!-- holds the image  uptil 'play' -->
         <img id="main-image" src="assets/class.webp" alt="Project Visual" />
         <div id="choice-buttons" class="choice-buttons" style="display: none;">
+          <!-- make choice and trigger custom function -->
           <button onclick="loadAlternate(6)">Go attend Class</button>
           <button onclick="loadAlternate(7)">Go visit Beach</button>
         </div>
       </div>
+      <!-- play button -->
       <button id="play-btn" class="play-btn" onclick="startSequence()">Play</button>
       <audio id="audio" controls style="display: none;"></audio>
     </div>
@@ -44,6 +53,7 @@
 </section>
 
 <!-- BTS Section -->
+ <!-- embedded Google drive videos -->
 <section id="bts" class="section-box container my-5">
   <h2 class="section-title">Behind The Scenes</h2>
   <div class="ratio ratio-16x9">
